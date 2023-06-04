@@ -1,31 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Парикмахерская "Мария"</title>
   <!-- Подключение стилей Tailwind CSS -->
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <style>
+    #home,
+    #about,
+    #services,
+    #contact {
+      min-height: 100vh;
+    }
+  </style>
 </head>
-
 <body class="bg-gray-100">
-
   <!-- Шапка сайта -->
   <header class="bg-white shadow">
     <div class="container mx-auto px-4 py-6 flex justify-between items-center">
       <a href="#" class="text-2xl font-bold text-gray-800">Парикмахерская "Мария"</a>
       <nav>
-        <a href="#" class="mr-4 text-gray-800 hover:text-gray-600">Главная</a>
-        <a href="#" class="mr-4 text-gray-800 hover:text-gray-600">О нас</a>
-        <a href="#" class="mr-4 text-gray-800 hover:text-gray-600">Услуги</a>
-        <a href="#" class="text-gray-800 hover:text-gray-600">Контакты</a>
+        <a href="#home" class="mr-4 text-gray-800 hover:text-gray-600">Главная</a>
+        <a href="#about" class="mr-4 text-gray-800 hover:text-gray-600">О нас</a>
+        <a href="#services" class="mr-4 text-gray-800 hover:text-gray-600">Услуги</a>
+        <a href="#contact" class="text-gray-800 hover:text-gray-600">Контакты</a>
       </nav>
     </div>
   </header>
 
   <!-- Баннер -->
-  <section class="bg-gray-200 py-20">
+  <section id="home" class="bg-gray-200 py-20">
     <div class="container mx-auto px-4">
       <h1 class="text-4xl font-bold text-center text-gray-800 mb-8">Добро пожаловать в парикмахерскую "Мария"</h1>
       <p class="text-lg text-center text-gray-600">Мы предлагаем профессиональные услуги по стрижке и уходу за волосами.</p>
@@ -33,7 +38,7 @@
   </section>
 
   <!-- О нас -->
-  <section class="py-16">
+  <section id="about" class="py-16">
     <div class="container mx-auto px-4">
       <h2 class="text-3xl font-bold text-center text-gray-800 mb-8">О нас</h2>
       <p class="text-lg text-center text-gray-600">Парикмахерская "Мария" имеет богатый опыт работы и предлагает качественные услуги по доступным ценам.</p>
@@ -41,7 +46,7 @@
   </section>
 
   <!-- Услуги -->
-  <section class="bg-gray-200 py-16">
+  <section id="services" class="bg-gray-200 py-16">
     <div class="container mx-auto px-4">
       <h2 class="text-3xl font-bold text-center text-gray-800 mb-8">Услуги</h2>
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -62,40 +67,55 @@
   </section>
 
   <!-- Контакты -->
-  <section class="py-16">
+  <section id="contact" class="py-16">
     <div class="container mx-auto px-4">
       <h2 class="text-3xl font-bold text-center text-gray-800 mb-8">Контакты</h2>
-      <div class="flex justify-center">
-        <div class="w-1/2 bg-white rounded-lg shadow-md p-6">
-          <form>
-            <div class="mb-4">
-              <label for="name" class="block text-gray-700 font-bold mb-2">Ваше имя:</label>
-              <input type="text" id="name" name="name" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:border-blue-500" placeholder="Введите ваше имя">
-            </div>
-            <div class="mb-4">
-              <label for="email" class="block text-gray-700 font-bold mb-2">Ваш email:</label>
-              <input type="email" id="email" name="email" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:border-blue-500" placeholder="Введите ваш email">
-            </div>
-            <div class="mb-4">
-              <label for="message" class="block text-gray-700 font-bold mb-2">Сообщение:</label>
-              <textarea id="message" name="message" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:border-blue-500" rows="4" placeholder="Введите ваше сообщение"></textarea>
-            </div>
-            <div class="text-center">
-              <button type="submit" class="py-2 px-4 bg-blue-500 text-white font-bold rounded-lg hover:bg-blue-600 focus:outline-none">Отправить</button>
-            </div>
-          </form>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div class="bg-white rounded-lg shadow-md p-6">
+          <h3 class="text-xl font-bold text-gray-800 mb-2">Адрес</h3>
+          <p class="text-gray-600">г. Москва, ул. Пушкина, д.10</p>
+        </div>
+        <div class="bg-white rounded-lg shadow-md p-6">
+          <h3 class="text-xl font-bold text-gray-800 mb-2">Телефон</h3>
+          <p class="text-gray-600">+7 (999) 123-45-67</p>
+        </div>
+        <div class="bg-white rounded-lg shadow-md p-6">
+          <h3 class="text-xl font-bold text-gray-800 mb-2">E-mail</h3>
+          <p class="text-gray-600">info@mariabarbershop.ru</p>
         </div>
       </div>
     </div>
   </section>
 
   <!-- Подвал сайта -->
-  <footer class="bg-gray-800 py-6">
-    <div class="container mx-auto px-4 text-center">
-      <p class="text-gray-300">&copy; 2023 Парикмахерская "Мария". Все права защищены.</p>
+  <footer class="bg-gray-800 text-white py-6">
+    <div class="container mx-auto px-4 flex justify-between items-center text-center">
+      <p>&copy; 2023 Парикмахерская "Мария". Все права защищены.</p>
     </div>
   </footer>
 
-</body>
+  <!-- Скрипт для плавного перелистывания при нажатии на навигационные ссылки -->
+  <script>
+    // Получаем ссылки на блоки и навигационные ссылки
+    const homeSection = document.querySelector('#home');
+    const aboutSection = document.querySelector('#about');
+    const servicesSection = document.querySelector('#services');
+    const contactSection = document.querySelector('#contact');
+    const homeLink = document.querySelector('a[href="#home"]');
+    const aboutLink = document.querySelector('a[href="#about"]');
+    const servicesLink = document.querySelector('a[href="#services"]');
+    const contactLink = document.querySelector('a[href="#contact"]');
 
+    // Функция, которая перелистывает страницу к нужному блоку
+    function scrollToSection(section) {
+      section.scrollIntoView({ behavior: 'smooth' });
+    }
+
+    // Обработчики нажатий на навигационные ссылки
+    homeLink.addEventListener('click', () => scrollToSection(homeSection));
+    aboutLink.addEventListener('click', () => scrollToSection(aboutSection));
+    servicesLink.addEventListener('click', () => scrollToSection(servicesSection));
+    contactLink.addEventListener('click', () => scrollToSection(contactSection));
+  </script>
+</body>
 </html>
